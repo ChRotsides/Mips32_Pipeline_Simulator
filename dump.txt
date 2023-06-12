@@ -25,7 +25,7 @@ New PC: 4
 ID:ori $v1, $zero, 0x2
 EX_Stage:
 sA: 0 InA: 0 sB: 0 inB: 1 Alu Result: 1 sB: 0 Register2Data: 0 WritetoMemData: 0
- MEM_rd: 42 WB_rd: 74 MEM WTR: ae WB WTR: 42
+ MEM_rd: 35 WB_rd: 20 MEM WTR: 64 WB WTR: 35
 EX:ori $v0, $zero, 0x1
  Registers:
 zero: 0	at: 0	v0: 0	v1: 0	a0: 0	a1: 0	a2: 0	a3: 0	t0: 0	t1: 0	t2: 0	t3: 0	t4: 0	t5: 0	t6: 0	t7: 0	s0: 0	s1: 0	s2: 0	s3: 0	s4: 0	s5: 0	s6: 0	s7: 0	t8: 0	t9: 0	k0: 0	k1: 0	gp: 10008000	sp: 7ffffffc	fp: 0	ra: 0	
@@ -39,7 +39,7 @@ New PC: 6
 ID:ori $a0, $zero, 0x3
 EX_Stage:
 sA: 0 InA: 0 sB: 0 inB: 2 Alu Result: 2 sB: 0 Register2Data: 0 WritetoMemData: 0
- MEM_rd: 2 WB_rd: 74 MEM WTR: 1 WB WTR: 42
+ MEM_rd: 2 WB_rd: 20 MEM WTR: 1 WB WTR: 35
 EX:ori $v1, $zero, 0x2
 AluResult:1
 ME:ori $v0, $zero, 0x1
