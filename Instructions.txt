@@ -1,0 +1,79 @@
+Instruction 0: ori $v0 $zero 0x1
+Instruction 1: ori $v1 $zero 0x2
+Instruction 2: ori $a0 $zero 0x3
+Instruction 3: ori $a1 $zero 0x4
+Instruction 4: ori $a2 $zero 0x5
+Instruction 5: ori $a3 $zero 0x6
+Instruction 6: ori $t0 $zero 0x0
+Instruction 7: ori $t1 $zero 0x1
+Instruction 8: ori $t2 $zero 0x2
+Instruction 9: ori $t3 $zero 0x3
+Instruction 10: ori $t4 $zero 0x4
+Instruction 11: ori $t5 $zero 0x5
+Instruction 12: ori $t6 $zero 0x6
+Instruction 13: ori $t7 $zero 0x7
+Instruction 14: ori $s0 $zero 0x0
+Instruction 15: ori $s1 $zero 0x1
+Instruction 16: ori $s2 $zero 0x2
+Instruction 17: ori $s3 $zero 0x3
+Instruction 18: ori $s4 $zero 0x4
+Instruction 19: ori $s5 $zero 0x5
+Instruction 20: ori $s6 $zero 0x6
+Instruction 21: ori $s7 $zero 0xa
+Instruction 22: ori $t8 $zero 0x8
+Instruction 23: ori $t9 $zero 0x9
+Instruction 24: ori $k0 $zero 0x0
+Instruction 25: ori $k1 $zero 0x0
+Instruction 26: ori $ra $zero 0x0
+Instruction 27: addi $t2 $t2 1
+Instruction 28: addi $t2 $t2 1
+Instruction 29: bne $t2 $s7 loop_2
+Instruction 30: addi $t0 $t0 1
+Instruction 31: or $s7 $s7 $s7
+Instruction 32: bne $t0 $s7 loop_0
+Instruction 33: sw $s7 0($gp) -
+Instruction 34: lw $s6 0($gp) -
+Instruction 35: beq $s6 $t9 loop_x
+Instruction 36: addi $t9 $t9 1
+Instruction 37: nor $t4 $t4 $t9
+Instruction 38: bne $t9 $s6 loop_9
+Instruction 39: add $s7 $s6 $t9
+Instruction 40: sub $s0 $s7 $s1
+Instruction 41: sw $s0 4($gp) -
+Instruction 42: lw $s7 4($gp) -
+Instruction 43: or $t4 $zero $gp
+Instruction 44: beq $t1 $s7 loop_y
+Instruction 45: addi $t0 $t0 0x1
+Instruction 46: addi $t1 $t1 0x1
+Instruction 47: lw $s0 0($gp) -
+Instruction 48: add $t2 $t2 $s0
+Instruction 49: addi $t3 $t3 0x7
+Instruction 50: addi $t4 $t4 0x4
+Instruction 51: addi $t5 $t5 0x6
+Instruction 52: addi $t6 $t6 0x4
+Instruction 53: addi $t7 $t7 0x3
+Instruction 54: sw $t3 0($t4) -
+Instruction 55: beq $zero $zero loop_x
+Instruction 56: beq $s1 $s7 exit
+Instruction 57: addi $s1 $s1 0x1
+Instruction 58: addi $s2 $s1 0x2
+Instruction 59: addi $s3 $s3 0x8
+Instruction 60: addi $s4 $s4 0x7
+Instruction 61: addi $s5 $s5 0x6
+Instruction 62: addi $s6 $s5 0x5
+Instruction 63: addi $t8 $t8 0x4
+Instruction 64: addi $t9 $t8 0x3
+Instruction 65: addi $t4 $t4 0x4
+Instruction 66: sw $s2 0($t4) -
+Instruction 67: beq $zero $zero loop_y
+Instruction 68: slt $t0 $t0 $t9
+Instruction 69: sll $t0 $t0 10
+Instruction 70: sll $zero $zero 0
+main -1
+loop_2 26
+loop_0 29
+loop_9 33
+loop_x 43
+loop_y 55
+exit 67
+end 69

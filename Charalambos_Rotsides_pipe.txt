@@ -1,0 +1,39 @@
+Name: Charalambos Rotsides
+ID: 915289
+
+-----Cycle 45-----
+Registers:
+78	0	0	1	2	3	4	5	6	0	1	8	3	4	5	6	7	0	1	2	3	4	5	6	a	8	9	0	0	10008000	7ffffffc	0	0
+
+Monitors:
+loop_2	78	addi $t0, $t0, 1	loop_2	$t2	$s7	$t2	8	8	a	-	$t2	-	-	-	-	-	-	-	-	-	-	-	-	$t2	8	0	0
+
+Memory State:
+
+Pipeline Stages:
+-	bne $t2, $s7, loop_2	-	-	addi $t2, $t2, 1
+
+-----Cycle 103-----
+Registers:
+84	0	0	1	2	3	4	5	6	9	1	a	3	4	5	6	7	0	1	2	3	4	5	6	a	8	9	0	0	10008000	7ffffffc	0	0
+
+Monitors:
+88	84	sw $s7, 0($gp)	loop_0	$t0	$s7	$t0	9	9	a	-	$t0	-	-	-	-	-	-	-	-	-	-	a	$s7	$t0	9	1	0
+
+Memory State:
+
+Pipeline Stages:
+sw $s7, 0($gp)	bne $t0, $s7, loop_0	-	or $s7, $s7, $s7	addi $t0, $t0, 1
+
+-----Final State-----
+Registers:
+128	0	0	1	2	3	4	5	6	400	13	be	81	10008090	71	4e	3d	a	13	15	93	82	71	76	13	50	53	0	0	10008000	7ffffffc	0	0
+
+Memory State:
+a	a	11	18	1f	26	2d	34	3b	42	49	50	57	5e	65	6c	73	7a	81	4	5	6	7	8	9	a	b	c	d	e	f	10	11	12	13	14	15
+
+Total Cycles:
+621
+
+Total Execution Time:
+15820721

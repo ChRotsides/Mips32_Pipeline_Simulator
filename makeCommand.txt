@@ -1,0 +1,1 @@
+g++ -std=gnu++17 sim.cpp ./instruction/instruction.cpp ./Mips32/Mips32.cpp ./register_file/register_file.cpp ./label_struct/label_struct.cpp ./parser/parser.cpp ./assembler/assembler.cpp
