@@ -88,7 +88,8 @@ main:
 	ori $t0, $zero, 0x0`
 
 ### Output
-`-----Cycle: 1-----
+`
+-----Cycle: 1-----
 
 PC: 0
 IF:ori $v0, $zero, 0x1
