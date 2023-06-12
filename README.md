@@ -74,7 +74,7 @@ Please refer to the provided diagrams and notes for more details on the simulati
 
 ## Input and Output example
 ### Input
-`
+```
 .data
 .text
 
@@ -86,10 +86,11 @@ main:
 	ori $a1, $zero, 0x4
 	ori $a2, $zero, 0x5
 	ori $a3, $zero, 0x6
-	ori $t0, $zero, 0x0`
+	ori $t0, $zero, 0x0```
 
 ### Output
-`-----Cycle: 1-----
+```
+-----Cycle: 1-----
 
 PC: 0
 IF:ori $v0, $zero, 0x1
@@ -249,4 +250,5 @@ AluResult:0
 ME:ori $t0, $zero, 0x0
  Registers:
 zero: 0	at: 0	v0: 1	v1: 2	a0: 3	a1: 4	a2: 5	a3: 6	t0: 0	t1: 0	t2: 0	t3: 0	t4: 0	t5: 0	t6: 0	t7: 0	s0: 0	s1: 0	s2: 0	s3: 0	s4: 0	s5: 0	s6: 0	s7: 0	t8: 0	t9: 0	k0: 0	k1: 0	gp: 10008000	sp: 7ffffffc	fp: 0	ra: 0	
- Memory:`
+ Memory:
+ ```
