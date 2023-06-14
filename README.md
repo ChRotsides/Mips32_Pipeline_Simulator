@@ -91,165 +91,124 @@ main:
 ### Output
 
 ```plaintext
------Cycle: 1-----
+-----Cycle 1-----
+Registers:
+0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	10008000	7ffffffc	0	0
 
-PC: 0
-IF:ori $v0, $zero, 0x1
- Registers:
-zero: 0	at: 0	v0: 0	v1: 0	a0: 0	a1: 0	a2: 0	a3: 0	t0: 0	t1: 0	t2: 0	t3: 0	t4: 0	t5: 0	t6: 0	t7: 0	s0: 0	s1: 0	s2: 0	s3: 0	s4: 0	s5: 0	s6: 0	s7: 0	t8: 0	t9: 0	k0: 0	k1: 0	gp: 10008000	sp: 7ffffffc	fp: 0	ra: 0	
- Memory:
- 
------Cycle: 2-----
+Monitors:
+4	0	ori $v0, $zero, 0x1	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	0	0
 
-PC: 1
-IF:ori $v1, $zero, 0x2
-New PC: 2
-ID:ori $v0, $zero, 0x1
- Registers:
-zero: 0	at: 0	v0: 0	v1: 0	a0: 0	a1: 0	a2: 0	a3: 0	t0: 0	t1: 0	t2: 0	t3: 0	t4: 0	t5: 0	t6: 0	t7: 0	s0: 0	s1: 0	s2: 0	s3: 0	s4: 0	s5: 0	s6: 0	s7: 0	t8: 0	t9: 0	k0: 0	k1: 0	gp: 10008000	sp: 7ffffffc	fp: 0	ra: 0	
- Memory:
+Memory State:
 
------Cycle: 3-----
+Pipeline Stages:
+ori $v0, $zero, 0x1
 
-PC: 2
-IF:ori $a0, $zero, 0x3
-New PC: 4
-ID:ori $v1, $zero, 0x2
-EX_Stage:
-sA: 0 InA: 0 sB: 0 inB: 1 Alu Result: 1 sB: 0 Register2Data: 0 WritetoMemData: 0
- MEM_rd: 35 WB_rd: 20 MEM WTR: 64 WB WTR: 35
-EX:ori $v0, $zero, 0x1
- Registers:
-zero: 0	at: 0	v0: 0	v1: 0	a0: 0	a1: 0	a2: 0	a3: 0	t0: 0	t1: 0	t2: 0	t3: 0	t4: 0	t5: 0	t6: 0	t7: 0	s0: 0	s1: 0	s2: 0	s3: 0	s4: 0	s5: 0	s6: 0	s7: 0	t8: 0	t9: 0	k0: 0	k1: 0	gp: 10008000	sp: 7ffffffc	fp: 0	ra: 0	
- Memory:
+-----Cycle 2-----
+Registers:
+4	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	10008000	7ffffffc	0	0
 
------Cycle: 4-----
+Monitors:
+8	4	ori $v1, $zero, 0x2	-	$zero	-	-	-	0	-	1	$zero	-	$v0	-	-	-	-	-	-	-	-	-	-	-	-	0	0
 
-PC: 3
-IF:ori $a1, $zero, 0x4
-New PC: 6
-ID:ori $a0, $zero, 0x3
-EX_Stage:
-sA: 0 InA: 0 sB: 0 inB: 2 Alu Result: 2 sB: 0 Register2Data: 0 WritetoMemData: 0
- MEM_rd: 2 WB_rd: 20 MEM WTR: 1 WB WTR: 35
-EX:ori $v1, $zero, 0x2
-AluResult:1
-ME:ori $v0, $zero, 0x1
- Registers:
-zero: 0	at: 0	v0: 0	v1: 0	a0: 0	a1: 0	a2: 0	a3: 0	t0: 0	t1: 0	t2: 0	t3: 0	t4: 0	t5: 0	t6: 0	t7: 0	s0: 0	s1: 0	s2: 0	s3: 0	s4: 0	s5: 0	s6: 0	s7: 0	t8: 0	t9: 0	k0: 0	k1: 0	gp: 10008000	sp: 7ffffffc	fp: 0	ra: 0	
- Memory:
+Memory State:
 
------Cycle: 5-----
+Pipeline Stages:
+ori $v1, $zero, 0x2	ori $v0, $zero, 0x1
 
-AluResult:2
-ME:ori $v1, $zero, 0x2
-WB:ori $v0, $zero, 0x1
-PC: 4
-IF:ori $a2, $zero, 0x5
-New PC: 8
-ID:ori $a1, $zero, 0x4
-EX_Stage:
-sA: 0 InA: 0 sB: 0 inB: 3 Alu Result: 3 sB: 0 Register2Data: 0 WritetoMemData: 0
- MEM_rd: 3 WB_rd: 2 MEM WTR: 1 WB WTR: 1
-EX:ori $a0, $zero, 0x3
-AluResult:2
-ME:ori $v1, $zero, 0x2
- Registers:
-zero: 0	at: 0	v0: 1	v1: 0	a0: 0	a1: 0	a2: 0	a3: 0	t0: 0	t1: 0	t2: 0	t3: 0	t4: 0	t5: 0	t6: 0	t7: 0	s0: 0	s1: 0	s2: 0	s3: 0	s4: 0	s5: 0	s6: 0	s7: 0	t8: 0	t9: 0	k0: 0	k1: 0	gp: 10008000	sp: 7ffffffc	fp: 0	ra: 0	
- Memory:
+-----Cycle 3-----
+Registers:
+8	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	10008000	7ffffffc	0	0
 
------Cycle: 6-----
+Monitors:
+c	8	ori $a0, $zero, 0x3	-	$zero	-	-	-	0	-	2	$zero	-	$v1	-	0	1	1	-	-	-	-	-	-	-	-	0	0
 
-AluResult:3
-ME:ori $a0, $zero, 0x3
-WB:ori $v1, $zero, 0x2
-PC: 5
-IF:ori $a3, $zero, 0x6
-New PC: 10
-ID:ori $a2, $zero, 0x5
-EX_Stage:
-sA: 0 InA: 0 sB: 0 inB: 4 Alu Result: 4 sB: 0 Register2Data: 0 WritetoMemData: 0
- MEM_rd: 4 WB_rd: 3 MEM WTR: 1 WB WTR: 1
-EX:ori $a1, $zero, 0x4
-AluResult:3
-ME:ori $a0, $zero, 0x3
- Registers:
-zero: 0	at: 0	v0: 1	v1: 2	a0: 0	a1: 0	a2: 0	a3: 0	t0: 0	t1: 0	t2: 0	t3: 0	t4: 0	t5: 0	t6: 0	t7: 0	s0: 0	s1: 0	s2: 0	s3: 0	s4: 0	s5: 0	s6: 0	s7: 0	t8: 0	t9: 0	k0: 0	k1: 0	gp: 10008000	sp: 7ffffffc	fp: 0	ra: 0	
- Memory:
+Memory State:
 
------Cycle: 7-----
+Pipeline Stages:
+ori $a0, $zero, 0x3	ori $v1, $zero, 0x2	ori $v0, $zero, 0x1
 
-AluResult:4
-ME:ori $a1, $zero, 0x4
-WB:ori $a0, $zero, 0x3
-PC: 6
-IF:ori $t0, $zero, 0x0
-New PC: 12
-ID:ori $a3, $zero, 0x6
-EX_Stage:
-sA: 0 InA: 0 sB: 0 inB: 5 Alu Result: 5 sB: 0 Register2Data: 0 WritetoMemData: 0
- MEM_rd: 5 WB_rd: 4 MEM WTR: 1 WB WTR: 1
-EX:ori $a2, $zero, 0x5
-AluResult:4
-ME:ori $a1, $zero, 0x4
- Registers:
-zero: 0	at: 0	v0: 1	v1: 2	a0: 3	a1: 0	a2: 0	a3: 0	t0: 0	t1: 0	t2: 0	t3: 0	t4: 0	t5: 0	t6: 0	t7: 0	s0: 0	s1: 0	s2: 0	s3: 0	s4: 0	s5: 0	s6: 0	s7: 0	t8: 0	t9: 0	k0: 0	k1: 0	gp: 10008000	sp: 7ffffffc	fp: 0	ra: 0	
- Memory:
+-----Cycle 4-----
+Registers:
+c	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	10008000	7ffffffc	0	0
 
------Cycle: 8-----
+Monitors:
+10	c	ori $a1, $zero, 0x4	-	$zero	-	-	-	0	-	3	$zero	-	$a0	-	0	2	2	-	-	-	-	1	$v0	-	-	0	0
 
-AluResult:5
-ME:ori $a2, $zero, 0x5
-WB:ori $a1, $zero, 0x4
-PC: 7
-IF:ori $t1, $zero, 0x1
-New PC: 7
-ID:ori $t0, $zero, 0x0
-EX_Stage:
-sA: 0 InA: 0 sB: 0 inB: 6 Alu Result: 6 sB: 0 Register2Data: 0 WritetoMemData: 0
- MEM_rd: 6 WB_rd: 5 MEM WTR: 1 WB WTR: 1
-EX:ori $a3, $zero, 0x6
-AluResult:5
-ME:ori $a2, $zero, 0x5
- Registers:
-zero: 0	at: 0	v0: 1	v1: 2	a0: 3	a1: 4	a2: 0	a3: 0	t0: 0	t1: 0	t2: 0	t3: 0	t4: 0	t5: 0	t6: 0	t7: 0	s0: 0	s1: 0	s2: 0	s3: 0	s4: 0	s5: 0	s6: 0	s7: 0	t8: 0	t9: 0	k0: 0	k1: 0	gp: 10008000	sp: 7ffffffc	fp: 0	ra: 0	
- Memory:
+Memory State:
 
------Cycle: 9-----
+Pipeline Stages:
+ori $a1, $zero, 0x4	ori $a0, $zero, 0x3	ori $v1, $zero, 0x2	ori $v0, $zero, 0x1
 
-AluResult:6
-ME:ori $a3, $zero, 0x6
-WB:ori $a2, $zero, 0x5
-PC: 8
-IF:ori $t2, $zero, 0x2
-New PC: 9
-ID:ori $t1, $zero, 0x1
-EX_Stage:
-sA: 0 InA: 0 sB: 0 inB: 0 Alu Result: 0 sB: 0 Register2Data: 0 WritetoMemData: 0
- MEM_rd: 7 WB_rd: 6 MEM WTR: 1 WB WTR: 1
-EX:ori $t0, $zero, 0x0
-AluResult:6
-ME:ori $a3, $zero, 0x6
- Registers:
-zero: 0	at: 0	v0: 1	v1: 2	a0: 3	a1: 4	a2: 5	a3: 0	t0: 0	t1: 0	t2: 0	t3: 0	t4: 0	t5: 0	t6: 0	t7: 0	s0: 0	s1: 0	s2: 0	s3: 0	s4: 0	s5: 0	s6: 0	s7: 0	t8: 0	t9: 0	k0: 0	k1: 0	gp: 10008000	sp: 7ffffffc	fp: 0	ra: 0	
- Memory:
+-----Cycle 5-----
+Registers:
+10	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	10008000	7ffffffc	0	0
 
------Cycle: 10-----
+Monitors:
+14	10	ori $a2, $zero, 0x5	-	$zero	-	$v0	1	0	-	4	$zero	-	$a1	-	0	3	3	-	-	-	-	2	$v1	$v0	1	0	0
 
-AluResult:0
-ME:ori $t0, $zero, 0x0
-WB:ori $a3, $zero, 0x6
-PC: 9
-IF:ori $t3, $zero, 0x3
-New PC: 11
-ID:ori $t2, $zero, 0x2
-EX_Stage:
-sA: 0 InA: 0 sB: 0 inB: 1 Alu Result: 1 sB: 0 Register2Data: 0 WritetoMemData: 0
- MEM_rd: 8 WB_rd: 7 MEM WTR: 1 WB WTR: 1
-EX:ori $t1, $zero, 0x1
-AluResult:0
-ME:ori $t0, $zero, 0x0
- Registers:
-zero: 0	at: 0	v0: 1	v1: 2	a0: 3	a1: 4	a2: 5	a3: 6	t0: 0	t1: 0	t2: 0	t3: 0	t4: 0	t5: 0	t6: 0	t7: 0	s0: 0	s1: 0	s2: 0	s3: 0	s4: 0	s5: 0	s6: 0	s7: 0	t8: 0	t9: 0	k0: 0	k1: 0	gp: 10008000	sp: 7ffffffc	fp: 0	ra: 0	
- Memory:
+Memory State:
+
+Pipeline Stages:
+ori $a2, $zero, 0x5	ori $a1, $zero, 0x4	ori $a0, $zero, 0x3	ori $v1, $zero, 0x2	ori $v0, $zero, 0x1
+
+-----Cycle 6-----
+Registers:
+14	0	0	1	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	10008000	7ffffffc	0	0
+
+Monitors:
+18	14	ori $a3, $zero, 0x6	-	$zero	-	$v1	2	0	-	5	$zero	-	$a2	-	0	4	4	-	-	-	-	3	$a0	$v1	2	0	0
+
+Memory State:
+
+Pipeline Stages:
+ori $a3, $zero, 0x6	ori $a2, $zero, 0x5	ori $a1, $zero, 0x4	ori $a0, $zero, 0x3	ori $v1, $zero, 0x2
+
+-----Cycle 7-----
+Registers:
+18	0	0	1	2	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	10008000	7ffffffc	0	0
+
+Monitors:
+1c	18	ori $t0, $zero, 0x0	-	$zero	-	$a0	3	0	-	6	$zero	-	$a3	-	0	5	5	-	-	-	-	4	$a1	$a0	3	0	0
+
+Memory State:
+
+Pipeline Stages:
+ori $t0, $zero, 0x0	ori $a3, $zero, 0x6	ori $a2, $zero, 0x5	ori $a1, $zero, 0x4	ori $a0, $zero, 0x3
+
+-----Cycle 8-----
+Registers:
+1c	0	0	1	2	3	4	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	10008000	7ffffffc	0	0
+
+Monitors:
+20	1c	ori $t1, $zero, 0x1	-	$zero	-	$a1	4	0	-	0	$zero	-	$t0	-	0	6	6	-	-	-	-	5	$a2	$a1	4	0	0
+
+Memory State:
+
+Pipeline Stages:
+ori $t1, $zero, 0x1	ori $t0, $zero, 0x0	ori $a3, $zero, 0x6	ori $a2, $zero, 0x5	ori $a1, $zero, 0x4
+
+-----Cycle 9-----
+Registers:
+20	0	0	1	2	3	4	5	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	10008000	7ffffffc	0	0
+
+Monitors:
+24	20	ori $t2, $zero, 0x2	-	$zero	-	$a2	5	0	-	1	$zero	-	$t1	-	0	0	0	-	-	-	-	6	$a3	$a2	5	0	0
+
+Memory State:
+
+Pipeline Stages:
+ori $t2, $zero, 0x2	ori $t1, $zero, 0x1	ori $t0, $zero, 0x0	ori $a3, $zero, 0x6	ori $a2, $zero, 0x5
+
+-----Cycle 10-----
+Registers:
+24	0	0	1	2	3	4	5	6	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	10008000	7ffffffc	0	0
+
+Monitors:
+28	24	ori $t3, $zero, 0x3	-	$zero	-	$a3	6	0	-	2	$zero	-	$t2	-	0	1	1	-	-	-	-	0	$t0	$a3	6	0	0
+
+Memory State:
+
+Pipeline Stages:
+ori $t3, $zero, 0x3	ori $t2, $zero, 0x2	ori $t1, $zero, 0x1	ori $t0, $zero, 0x0	ori $a3, $zero, 0x6
+
  ```
